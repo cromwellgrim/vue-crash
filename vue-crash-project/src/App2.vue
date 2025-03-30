@@ -4,7 +4,7 @@ export default {
     return { 
       name: 'John Smith',
       status: 'active',
-      tasks: ['Task One', 'Task two', 'task'],
+      tasks: ['Task One', 'Task Two', 'Task Three'],
       link: 'https://vuejs.org'
     };
   },
@@ -28,7 +28,7 @@ export default {
   <p v-if="status === 'active'">User is Active</p>
   <p v-else-if="status === 'pending'">User is Pending</p>
   <p v-else>User is Inactive</p>
-
+  <p v-text="Hi"></p>
   <h2>Tasks</h2>
   <ul>
     <li v-for="task in tasks" :key="task">{{ task }}</li>
