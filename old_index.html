@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <title>View Test</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{message}}</h1>
+            <button @click="clickMe">Click me!</button>
+        </div>
+
+        <script>
+            const app = Vue.createApp({
+                data() {
+                    return {
+                        message: "Hello from Standard!"
+                    }
+                },
+                methods: {
+                    clickMe() {
+                        console.log('Button Clicked!');
+                        this.message = 'Updated Message';
+                    }
+                }
+            });
+
+            app.mount('#app');
+        </script>
+    </body>
+</html>
