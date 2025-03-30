@@ -39,7 +39,8 @@ export default {
 
       console.log(this.users);
     }
-  }
+  },
+  componenets: { UserList }
 };
 </script>
 
@@ -76,6 +77,7 @@ export default {
   </form>
 
   <!-- Users List -->
+  <user-list :users="users"/>
   <div>
     <table v-if="user.length" class="w-full bg-white rounded-md">
       <tr>
@@ -95,8 +97,6 @@ export default {
           </li>
         </td>
       </tr>
-
-
     </table>
   </div>
 
